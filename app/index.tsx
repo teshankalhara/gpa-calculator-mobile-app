@@ -1,14 +1,14 @@
-import { View, Text, Alert } from 'react-native'
+import { View, Text } from 'react-native'
 import '../global.css'
 import AddAccountButton from '@/components/addAccountButton/addAccountButton'
 
 const index = () => {
   const handleAddAccount = () => {
-    Alert.alert('Account Added', 'Your account has been successfully added.')
+    console.log('Account Added', 'Your account has been successfully added.')
   }
 
   const handleDeleteAccount = () => {
-    Alert.alert('Account Deleted', 'Your account has been successfully deleted.')
+    console.log('Account Deleted', 'Your account has been successfully deleted.')
   }
   return (
     <View>
@@ -20,7 +20,7 @@ const index = () => {
       />
       <AddAccountButton
         title="Delete Account"
-        iconName="person"
+        iconName="person-remove"
         onPress={handleDeleteAccount}
       />
     </View>
